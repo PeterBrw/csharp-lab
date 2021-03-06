@@ -7,17 +7,10 @@ namespace lab
     {
         static void Main(string[] args)
         {
-            Date_univ uni = new Date_univ();
             var students = new Students();
 
-            uni.An_studiu = 2019;
-            uni.Specializare = "Calculatoare";
-            uni.Universitate = "Universitatea din Oradea";
-
-            
-
             var student1 = new Student();
-            var student2= new Student();
+            var student2 = new Student();
             var student3 = new Student();
             var student4 = new Student();
             var student5 = new Student();
@@ -27,7 +20,7 @@ namespace lab
             student1.Prenume = "Ion";
             student1.An_nastere = 1930;
             student1.Adresa = "Oltenita";
-            student1.Date = uni;
+            student1.Date = new Date_univ("Universitatea din Oradea", "Calculatoare", 2019);
 
             students.AddStudent(student1);
 
@@ -35,7 +28,7 @@ namespace lab
             student2.Prenume = "Emil";
             student2.An_nastere = 1939;
             student2.Adresa = "Tighina";
-            student2.Date = uni;
+            student2.Date = new Date_univ("Universitatea din Oradea", "Calculatoare", 2019);
 
             students.AddStudent(student2);
 
@@ -43,7 +36,7 @@ namespace lab
             student3.Prenume = "Traian";
             student3.An_nastere = 1951;
             student3.Adresa = "Basarabi";
-            student3.Date = uni;
+            student3.Date = new Date_univ("Universitatea din Oradea", "Calculatoare", 2019);
 
             students.AddStudent(student3);
 
@@ -51,7 +44,7 @@ namespace lab
             student4.Prenume = "Klaus";
             student4.An_nastere = 1959;
             student4.Adresa = "Sibiu";
-            student4.Date = uni;
+            student4.Date = new Date_univ("Universitatea din Oradea", "Calculatoare", 2019);
 
             students.AddStudent(student4);
 
@@ -59,7 +52,7 @@ namespace lab
             student5.Prenume = "Victor";
             student5.An_nastere = 1972;
             student5.Adresa = "Bucuresti";
-            student5.Date = uni;
+            student5.Date = new Date_univ("Universitatea din Oradea", "Calculatoare", 2019);
 
             students.AddStudent(student5);
 
@@ -67,7 +60,7 @@ namespace lab
             student6.Prenume = "Diana";
             student6.An_nastere = 1975;
             student6.Adresa = "Bucuresti";
-            student6.Date = uni;
+            student6.Date = new Date_univ("Universitatea din Oradea", "Calculatoare", 2019);
 
             students.AddStudent(student6);
 
