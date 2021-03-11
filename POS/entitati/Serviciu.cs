@@ -6,24 +6,12 @@ using System.Threading.Tasks;
 
 namespace entitati
 {
-    public class Serviciu
+    public class Serviciu : ProdusAbstract
+        
     {
-        long id;
-        String nume;
-        String codIntern;
+        public Serviciu(long id, string nume, string codIntern) : base(id, nume, codIntern) {}
 
-        public Serviciu(long id, string nume, string codIntern)
-        {
-            this.Id = id;
-            this.Nume = nume;
-            this.CodIntern = codIntern;
-        }
-
-        public long Id { get => id; set => id = value; }
-        public string Nume { get => nume; set => nume = value; }
-        public string CodIntern { get => codIntern; set => codIntern = value; }
-
-        public string Afisare()
+        public override string Descriere()
         {
             return $@"Nume: {Nume},
 Id: {Id},
