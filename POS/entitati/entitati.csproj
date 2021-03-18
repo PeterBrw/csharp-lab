@@ -44,6 +44,7 @@
     <Compile Include="ProdeseMgr.cs" />
     <Compile Include="Produs.cs" />
     <Compile Include="ProdusAbstract.cs" />
+    <Compile Include="ProdusAbstractMgr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serviciu.cs" />
     <Compile Include="ServiciuMgr.cs" />

@@ -21,7 +21,7 @@ namespace app1
             ProdeseMgr prodeseManager = new ProdeseMgr(nrProduse);
 
             seviciiManager.AdaugareServicii();
-            seviciiManager.AdaugareServicii();
+            prodeseManager.AdaugareProduse();
 
             prodeseManager.AdaugareProduse();
             prodeseManager.AfisareProduse();

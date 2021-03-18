@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace entitati
 {
-    public class ServiciuMgr
+    public class ServiciuMgr : ProdusAbstractMgr
     {
         int nrServicii;
-        List<Serviciu> servicii = new List<Serviciu>();
+        //List<Serviciu> servicii = new List<Serviciu>();
 
         public ServiciuMgr(int nrServicii)
         {
@@ -17,7 +17,7 @@ namespace entitati
         }
         public void AdaugareServicii()
         {
-            while (servicii.Count < nrServicii)
+            while (produseServicii.Count < nrServicii)
             {
                 Console.WriteLine("Id serviciu: ");
                 long id = int.Parse(Console.ReadLine());
@@ -27,7 +27,7 @@ namespace entitati
                 string codIntern = Console.ReadLine();
                 Serviciu serv = new Serviciu(id, nume, codIntern);
 
-                bool exist = servicii.Any(item => item.Id == serv.Id && item.Nume == serv.Nume && item.CodIntern == serv.CodIntern);
+                bool exist = produseServicii.Any(item => item.Id == serv.Id && item.Nume == serv.Nume && item.CodIntern == serv.CodIntern);
 
                 if (exist)
                 {
@@ -36,7 +36,7 @@ namespace entitati
                 }
                 else
                 {
-                    servicii.Add(serv);
+                    produseServicii.Add(serv);
                     Console.WriteLine("Serviciu adaugat!");
                 }
             }
@@ -44,7 +44,7 @@ namespace entitati
 
         public void AfisareServicii(List<Serviciu> servicii)
         {
-            foreach (var serviciu in servicii)
+            foreach (var serviciu in produseServicii)
             {
                 Console.WriteLine(serviciu.Descriere());
             }

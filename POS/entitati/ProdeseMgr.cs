@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace entitati
 {
-    public class ProdeseMgr
+    public class ProdeseMgr : ProdusAbstractMgr
     {
         int nrProduse;
-        List<Produs> produse = new List<Produs>();
+        //List<Produs> produse = new List<Produs>();
 
         public ProdeseMgr(int nrProduse)
         {
@@ -18,7 +18,7 @@ namespace entitati
 
         public void AdaugareProduse ()
         {
-            while (produse.Count < nrProduse)
+            while (produseServicii.Count < nrProduse)
             {
                 Console.WriteLine("Id produs: ");
                 long id = int.Parse(Console.ReadLine());
@@ -30,7 +30,7 @@ namespace entitati
                 string producator = Console.ReadLine();
                 Produs prod = new Produs(id, nume, codIntern, producator);
 
-                bool exist = produse.Any(item => item.Id == prod.Id && item.Nume == prod.Nume && item.CodIntern == prod.CodIntern && item.Producator == prod.Producator);
+                bool exist = produseServicii.Any(item => item.Id == prod.Id && item.Nume == prod.Nume && item.CodIntern == prod.CodIntern ); // && item.Producator == prod.Producator
 
                 if (exist)
                 {
@@ -39,7 +39,7 @@ namespace entitati
                 }
                 else
                 {
-                    produse.Add(prod);
+                    produseServicii.Add(prod);
                     Console.WriteLine("Produs adaugat!");
                 }
             }
@@ -47,7 +47,7 @@ namespace entitati
 
         public void AfisareProduse()
         {
-            foreach (var produs in produse)
+            foreach (var produs in produseServicii)
             {
                 Console.WriteLine(produs.Descriere());
             }
