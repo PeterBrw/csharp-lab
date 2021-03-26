@@ -53,12 +53,12 @@ namespace entitati
             }
         }
 
-        //public void AfisareServicii()
-        //{
-        //    foreach (var serviciu in produseServicii)
-        //    {
-        //        Console.WriteLine(serviciu.Descriere());
-        //    }
-        //}
+        public void AfisareServicii()
+        {
+            foreach (ProdusAbstract serviciu in produseServicii)
+            {
+                Console.WriteLine(serviciu.Descriere());
+            }
+        }
     }
 }

@@ -21,6 +21,7 @@ namespace entitati
             return $@"Nume: {Nume},
 Id: {Id},
 Cod Intern: {CodIntern}
+Producator: {Producator}
 ";
         }
             }

@@ -9,8 +9,7 @@ namespace entitati
 {
     public abstract class ProdusAbstractMgr
     {
-        //protected static ArrayList produseServicii = new ArrayList();
-        protected static List<ProdusAbstract> produseServicii = new List<ProdusAbstract>();
+        protected static ArrayList produseServicii = new ArrayList();
 
         public void Write2Console()
         {
