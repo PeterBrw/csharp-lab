@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace entitati
 {
     public abstract class ProdusAbstractMgr
     {
+        //protected static ArrayList produseServicii = new ArrayList();
         protected static List<ProdusAbstract> produseServicii = new List<ProdusAbstract>();
 
         public void Write2Console()

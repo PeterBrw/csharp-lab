@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProdeseMgr.cs" />
+    <Compile Include="ProduseMgr.cs" />
     <Compile Include="Produs.cs" />
     <Compile Include="ProdusAbstract.cs" />
     <Compile Include="ProdusAbstractMgr.cs" />

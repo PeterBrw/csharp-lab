@@ -12,19 +12,23 @@ namespace app1
         static void Main(string[] args)
 
         {
-            Console.WriteLine("Nr. servicii: ");
-            int nrServicii = int.Parse(Console.ReadLine());
             Console.WriteLine("Nr. produse: ");
             int nrProduse = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("Nr. servicii: ");
+            int nrServicii = int.Parse(Console.ReadLine());
+            
+
+            ProduseMgr produseManager = new ProduseMgr(nrProduse);
             ServiciuMgr seviciiManager = new ServiciuMgr(nrServicii);
-            ProdeseMgr prodeseManager = new ProdeseMgr(nrProduse);
 
+
+            
+
+            produseManager.AdaugareProduse();
             seviciiManager.AdaugareServicii();
-            prodeseManager.AdaugareProduse();
 
-            prodeseManager.AdaugareProduse();
-            prodeseManager.AfisareProduse();
+            produseManager.Write2Console();
         }
     }
 }
