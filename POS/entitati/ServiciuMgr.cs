@@ -46,7 +46,7 @@ namespace entitati
                 }
                 else
                 {
-                    produseServicii.Add(serv);
+                    produseServicii.Adauga(serv);
                     cnt++;
                     Console.WriteLine("Serviciu adaugat!");
                 }
