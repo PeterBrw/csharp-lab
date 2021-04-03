@@ -27,8 +27,6 @@ namespace app1
                 string codIntern = Console.ReadLine();
                 Serviciu serv = new Serviciu(id, nume, codIntern);
 
-                //bool exist = produseServicii.Any(item => item.Id == serv.Id && item.Nume == serv.Nume && item.CodIntern == serv.CodIntern);
-
                 bool exist = false;
 
                 foreach(ProdusAbstract obj in produseServicii)

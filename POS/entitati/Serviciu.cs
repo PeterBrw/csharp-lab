@@ -13,7 +13,8 @@ namespace entitati
 
         public override string Descriere()
         {
-            return $@"Nume: {Nume},
+            return $@"Serviciu:
+Nume: {Nume},
 Id: {Id},
 Cod Intern: {CodIntern}
 ";

@@ -30,7 +30,6 @@ namespace app1
                 string producator = Console.ReadLine();
                 Produs prod = new Produs(id, nume, codIntern, producator);
 
-                //bool exist = produseServicii.Any(item => item.Id == prod.Id && item.Nume == prod.Nume && item.CodIntern == prod.CodIntern ); // && item.Producator == prod.Producator
                 bool exist = false;
 
                 foreach (ProdusAbstract obj in produseServicii)
