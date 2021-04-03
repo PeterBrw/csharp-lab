@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColectieTipizata.cs" />
+    <Compile Include="ProdusAbstractMgr.cs" />
     <Compile Include="ProduseMgr.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
