@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace enitati
+namespace app1
 {
     public class ColectieTipizata : System.Collections.CollectionBase
     {
