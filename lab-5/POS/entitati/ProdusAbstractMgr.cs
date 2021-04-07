@@ -10,7 +10,7 @@ namespace entitati
 {
     public abstract class ProdusAbstractMgr
     {
-        protected static List<ProdusAbstract> produseServicii = new List<ProdusAbstract>(); // aici punem lista in loc de lista tipizata
+        protected static List<ProdusAbstract> produseServicii = new List<ProdusAbstract>(); 
 
         public void Write2Console()
         {

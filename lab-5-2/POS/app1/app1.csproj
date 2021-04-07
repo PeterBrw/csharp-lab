@@ -43,8 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColectieTipizata.cs" />
-    <Compile Include="CustomComparer.cs" />
+    <Compile Include="ListaGen.cs" />
     <Compile Include="ProdusAbstractMgr.cs" />
     <Compile Include="ProduseMgr.cs" />
     <Compile Include="Program.cs" />
@@ -59,6 +58,10 @@
       <Project>{815ac4bb-14e3-49e8-8cd8-8a91306f4a4d}</Project>
       <Name>entitati</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Produse.xml" />
+    <Content Include="Servicii.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

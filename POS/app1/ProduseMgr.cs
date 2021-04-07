@@ -32,7 +32,7 @@ namespace app1
 
                 bool exist = false;
 
-                foreach (ProdusAbstract obj in produseServicii)
+                foreach (ProdusAbstract obj in elemente)
                 {
                     if (obj.Id.Equals(prod.Id) && obj.Nume.Equals(prod.Nume) && obj.CodIntern.Equals(prod.CodIntern))
                     {
@@ -47,7 +47,7 @@ namespace app1
                 }
                 else
                 {
-                    produseServicii.Adauga(prod);
+                    elemente.Adauga(prod);
                     cnt++;
                     Console.WriteLine("Produs adaugat!");
                 }
@@ -56,7 +56,7 @@ namespace app1
 
         public void AfisareProduse()
         {
-            foreach (ProdusAbstract produs in produseServicii)
+            foreach (ProdusAbstract produs in elemente)
             {
                 Console.WriteLine(produs.Descriere());
             }

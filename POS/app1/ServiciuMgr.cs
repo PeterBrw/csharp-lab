@@ -29,7 +29,7 @@ namespace app1
 
                 bool exist = false;
 
-                foreach(ProdusAbstract obj in produseServicii)
+                foreach(ProdusAbstract obj in elemente)
                 {
                     if(obj.Id.Equals(serv.Id) && obj.Nume.Equals(serv.Nume) && obj.CodIntern.Equals(serv.CodIntern))
                     {
@@ -45,7 +45,7 @@ namespace app1
                 }
                 else
                 {
-                    produseServicii.Adauga(serv);
+                    elemente.Adauga(serv);
                     cnt++;
                     Console.WriteLine("Serviciu adaugat!");
                 }
@@ -54,7 +54,7 @@ namespace app1
 
         public void AfisareServicii()
         {
-            foreach (ProdusAbstract serviciu in produseServicii)
+            foreach (ProdusAbstract serviciu in elemente)
             {
                 Console.WriteLine(serviciu.Descriere());
             }

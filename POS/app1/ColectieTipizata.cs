@@ -17,23 +17,13 @@ namespace app1
         }
         public void Extrage(long id)
         {
-
             this.List.Remove(id);
-        }
-        public bool Contine(ProdusAbstract produs)
-        {
-
-            String tit =
-            (String)produs.CodIntern;
-
-            return
-            this.List.Contains(tit);
         }
         public bool Contine(string codIntern)
         {
             String tit = (String)codIntern;
             return this.List.Contains(tit);
-        }
+        }   
 
         public ProdusAbstract this[string codIntern]
         {
@@ -46,6 +36,11 @@ namespace app1
                 else return null;
             }
         }
+
+        public void Sortare()
+        {
+            this.InnerList.Sort(new CustomComparer());
+        } 
     }
 
 }

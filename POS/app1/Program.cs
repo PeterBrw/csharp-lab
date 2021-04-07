@@ -17,13 +17,9 @@ namespace app1
 
             Console.WriteLine("Nr. servicii: ");
             int nrServicii = int.Parse(Console.ReadLine());
-            
 
             ProduseMgr produseManager = new ProduseMgr(nrProduse);
             ServiciuMgr seviciiManager = new ServiciuMgr(nrServicii);
-
-
-            
 
             produseManager.AdaugareProduse();
             seviciiManager.AdaugareServicii();
