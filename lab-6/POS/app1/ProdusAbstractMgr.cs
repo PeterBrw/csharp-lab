@@ -6,19 +6,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entitati
+namespace app1
 {
     public abstract class ProdusAbstractMgr
     {
-        protected static List<ProdusAbstract> produseServicii = new List<ProdusAbstract>(); 
+        protected static List<ProdusAbstract> elemente = new List<ProdusAbstract>(); 
 
         public void Write2Console()
         {
-            produseServicii = (from prod in produseServicii
+            elemente = (from prod in elemente
                                                            orderby prod.Nume
                                                            select prod
                                                           ).ToList();
-            foreach (ProdusAbstract prod in produseServicii)
+            foreach (ProdusAbstract prod in elemente)
             {
                 Console.WriteLine(prod.Descriere());
             }

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<servicii>
+	<Serviciu>
+		<Nume>Calculator</Nume>
+		<CodIntern>157235</CodIntern>
+		<Pret>2200</Pret>
+		<Categorie>Tehnologia Informatiei</Categorie>
+		<Producator>USA</Producator>
+	</Serviciu>
+	<Serviciu>
+		<Nume>Calculator</Nume>
+		<CodIntern>157235</CodIntern>
+		<Pret>2200</Pret>
+		<Categorie>Tehnologia Informatiei</Categorie>
+		<Producator>USA</Producator>
+	</Serviciu>
+	<Serviciu>
+		<Nume>Avion</Nume>
+		<CodIntern>15722</CodIntern>
+		<Pret>22000000</Pret>
+		<Categorie>Aviatie</Categorie>
+		<Producator>Africa</Producator>
+	</Serviciu>
+</servicii>

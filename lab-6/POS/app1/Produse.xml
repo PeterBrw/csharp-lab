@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<produse>
+	<Produs>
+		<Nume>Calculator</Nume>
+		<CodIntern>157235</CodIntern>
+		<Pret>2200</Pret>
+		<Categorie>Tehnologia Informatiei</Categorie>
+		<Producator>USA</Producator>
+	</Produs>
+	<Produs>
+		<Nume>Masina</Nume>
+		<CodIntern>123</CodIntern>
+		<Pret>2100</Pret>
+		<Categorie>Inginerie Auto</Categorie>
+		<Producator>China</Producator>
+	</Produs>
+</produse>

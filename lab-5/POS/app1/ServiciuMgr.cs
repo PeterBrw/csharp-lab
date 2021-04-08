@@ -1,11 +1,12 @@
-﻿using System;
+﻿using entitati;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace entitati
+namespace app1
 {
     public class ServiciuMgr : ProdusAbstractMgr
     {
@@ -27,7 +28,7 @@ namespace entitati
         public void InitListafromXML()
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load("D:\\Anul II\\OOP\\labs\\lab-5\\POS\\entitati\\Servicii.xml");
+            doc.Load("D:\\Anul II\\OOP\\labs\\lab-5\\POS\\app1\\Servicii.xml");
             XmlNodeList lista_noduri = doc.SelectNodes("/servicii/Serviciu");
  
             foreach (XmlNode nod in lista_noduri)
