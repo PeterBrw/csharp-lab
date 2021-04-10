@@ -11,14 +11,19 @@ namespace app1
     {
         static void Main(string[] args)
 
-        {   
+        {
             ProduseMgr produseManager = new ProduseMgr();
             ServiciuMgr seviciiManager = new ServiciuMgr();
+
+           
+            PacheteMgr pachete = new PacheteMgr();
+            pachete.InitListafromXML();
 
             produseManager.InitListafromXML();
             seviciiManager.InitListafromXML();
 
-            produseManager.Write2Console();
+
+            pachete.Write2Console();
         }
     }
 }

@@ -13,12 +13,24 @@ namespace entitati
 
         public bool canAddToPackage(Pachet pachet)
         {
-            return true;
-        }
+            int nrServicii = 0;
+            foreach (IPackageble item in pachet.Elem_pachet)
+            {
+                if (item is Serviciu)
+                    nrServicii++;
+            }
 
+            if(nrServicii < pachet.NrServicii)
+            {
+                return true;
+            }
+
+            return false;
+        }
         public override string Descriere()
         {
-            return $@"Nume: {Nume},
+            return $@"Serviciu
+Nume: {Nume},
 Id: {Id},
 Cod Intern: {CodIntern},
 Pret: {Pret},

@@ -28,7 +28,7 @@ namespace app1
         public void InitListafromXML()
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load("D:\\Anul II\\OOP\\labs\\lab-5\\POS\\app1\\Servicii.xml");
+            doc.Load("D:\\Anul II\\OOP\\labs\\lab-6\\POS\\app1\\Servicii.xml");
             XmlNodeList lista_noduri = doc.SelectNodes("/servicii/Serviciu");
  
             foreach (XmlNode nod in lista_noduri)
@@ -42,6 +42,25 @@ namespace app1
                 Serviciu serv = new Serviciu(elemente.Count + 1, nume, codIntern, pret, categorie);
 
                 AdaugareServicii(serv);
+            }
+        }
+
+        public void Init(Pachet pachet)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load("D:\\Anul II\\OOP\\labs\\lab-6\\POS\\app1\\Servicii.xml");
+            XmlNodeList lista_noduri = doc.SelectNodes("/servicii/Serviciu");
+            foreach (XmlNode nod in lista_noduri)
+            {
+
+                string nume = nod["Nume"].InnerText;
+                string codIntern = nod["CodIntern"].InnerText;
+                int pret = int.Parse(nod["Pret"].InnerText);
+                string categorie = nod["Categorie"].InnerText;
+
+                Serviciu serv = new Serviciu(elemente.Count + 1, nume, codIntern, pret, categorie);
+
+                pachet.Add_element(serv);
             }
         }
 

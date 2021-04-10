@@ -60,6 +60,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pachete.xml" />
     <Content Include="Produse.xml" />
     <Content Include="Servicii.xml" />
   </ItemGroup>

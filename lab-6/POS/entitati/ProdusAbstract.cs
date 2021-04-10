@@ -23,6 +23,13 @@ namespace entitati
             this.Categorie = categorie;
         }
 
+        protected ProdusAbstract(long id, string nume, string codIntern)
+        {
+            this.Id = id;
+            this.Nume = nume;
+            this.CodIntern = codIntern;
+        }
+
         public long Id { get => id; set => id = value; }
         public string Nume { get => nume; set => nume = value; }
         public string CodIntern { get => codIntern; set => codIntern = value; }

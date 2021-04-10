@@ -8,10 +8,18 @@ namespace entitati
 {
     public class Pachet : ProdusAbstract, IPackageble
     {
-        private List<IPackageble> elem_pachet = new List<IPackageble>();
-        public Pachet(long id, string nume, string codIntern, int pret, string categorie) : base(id, nume, codIntern, pret, categorie)
+        List<IPackageble> elem_pachet = new List<IPackageble>();
+        int nrProduse;
+        int nrServicii;
+        public Pachet(int id, string nume, string codIntern, int nrServicii, int nrProduse) : base(id, nume, codIntern)
         {
+            this.NrProduse = nrProduse;
+            this.NrServicii = nrServicii;
         }
+
+        public List<IPackageble> Elem_pachet { get => elem_pachet; set => elem_pachet = value; }
+        public int NrProduse { get => nrProduse; set => nrProduse = value; }
+        public int NrServicii { get => nrServicii; set => nrServicii = value; }
 
         public void Add_element(IPackageble p)
         {
@@ -28,11 +36,18 @@ namespace entitati
 
         public override string Descriere()
         {
-           foreach(IPackageble elem in elem_pachet)
+            var builder = new StringBuilder("");
+            foreach (IPackageble elem in elem_pachet)
             {
-                ((ProdusAbstract)elem).Descriere(); // here it's 
+                builder.Append(((ProdusAbstract)elem).Descriere()); 
             }
-           return "string";
+            return $@"Nume: {Nume},
+Id: {Id},
+Cod Intern: {CodIntern},
+Pret: {NrProduse},
+Categorie: {NrProduse}
+Elemente Pachet: {builder.ToString()}
+"; 
         }
     }
 }

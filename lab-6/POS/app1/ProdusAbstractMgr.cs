@@ -14,10 +14,10 @@ namespace app1
 
         public void Write2Console()
         {
-            elemente = (from prod in elemente
-                                                           orderby prod.Nume
-                                                           select prod
-                                                          ).ToList();
+            //elemente = (from prod in elemente
+            //            orderby prod.Nume
+            //            select prod
+            //            ).ToList();
             foreach (ProdusAbstract prod in elemente)
             {
                 Console.WriteLine(prod.Descriere());

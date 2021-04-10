@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pachete>
+	<Pachet>
+		<Nume>Pachet 1</Nume>
+		<CodIntern>500</CodIntern>
+		<Produse>1</Produse>
+		<Servicii>2</Servicii>
+	</Pachet>
+	<Pachet>
+		<Nume>Pachet 2</Nume>
+		<CodIntern>502</CodIntern>
+		<Produse>1</Produse>
+		<Servicii>1</Servicii>
+	</Pachet>
+	<Pachet>
+		<Nume>Pachet 3</Nume>
+		<CodIntern>503</CodIntern>
+		<Produse>2</Produse>
+		<Servicii>0</Servicii>
+	</Pachet>
+</pachete>
