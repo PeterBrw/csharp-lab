@@ -21,7 +21,8 @@ namespace app1
                 string codIntern = nod["CodIntern"].InnerText;
                 int nrProduse = int.Parse(nod["Produse"].InnerText);
                 int nrServicii = int.Parse(nod["Servicii"].InnerText);
-                Pachet pachet = new Pachet(elemente.Count + 1, nume, codIntern, nrServicii, nrProduse);
+                string categorie = nod["Categorie"].InnerText;
+                Pachet pachet = new Pachet(elemente.Count + 1, nume, codIntern, categorie, nrServicii, nrProduse);
 
                 ProduseMgr produse = new ProduseMgr();
                 ServiciuMgr servicii = new ServiciuMgr(); 

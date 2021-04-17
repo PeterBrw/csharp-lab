@@ -13,14 +13,7 @@ namespace entitati
 
         public bool canAddToPackage(Pachet pachet)
         {
-            int nrServicii = 0;
-            foreach (IPackageble item in pachet.Elem_pachet)
-            {
-                if (item is Serviciu)
-                    nrServicii++;
-            }
-
-            if(nrServicii < pachet.NrServicii)
+            if(pachet.NrTotalServicii < pachet.NrServicii)
             {
                 return true;
             }
@@ -39,6 +32,3 @@ Categorie: {Categorie}
         }
     }
 }
-
-
-

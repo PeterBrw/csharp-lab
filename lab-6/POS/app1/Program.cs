@@ -15,7 +15,7 @@ namespace app1
             ProduseMgr produseManager = new ProduseMgr();
             ServiciuMgr seviciiManager = new ServiciuMgr();
 
-           
+
             PacheteMgr pachete = new PacheteMgr();
             pachete.InitListafromXML();
 
@@ -24,6 +24,10 @@ namespace app1
 
 
             pachete.Write2Console();
+
+            Console.WriteLine("\n");
+
+            pachete.Filtrare();
         }
     }
 }

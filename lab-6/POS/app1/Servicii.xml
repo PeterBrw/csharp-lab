@@ -2,14 +2,14 @@
 <servicii>
 	<Serviciu>
 		<Nume>Calculator</Nume>
-		<CodIntern>157235</CodIntern>
+		<CodIntern>157234</CodIntern>
 		<Pret>2200</Pret>
 		<Categorie>Tehnologia Informatiei</Categorie>
 		<Producator>USA</Producator>
 	</Serviciu>
 	<Serviciu>
 		<Nume>Calculator</Nume>
-		<CodIntern>157235</CodIntern>
+		<CodIntern>157236</CodIntern>
 		<Pret>2200</Pret>
 		<Categorie>Tehnologia Informatiei</Categorie>
 		<Producator>USA</Producator>

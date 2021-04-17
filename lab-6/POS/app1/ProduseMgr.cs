@@ -50,7 +50,7 @@ namespace app1
         public void Init(Pachet pachet)
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load("D:\\Anul II\\OOP\\labs\\lab-5\\POS\\app1\\Produse.xml");
+            doc.Load("D:\\Anul II\\OOP\\labs\\lab-6\\POS\\app1\\Produse.xml");
 
             XmlNodeList lista_noduri = doc.SelectNodes("/produse/Produs");
             foreach (XmlNode nod in lista_noduri)

@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CriteriuCategorie.cs" />
+    <Compile Include="CriteriuPret.cs" />
+    <Compile Include="FiltrareCriteriu.cs" />
+    <Compile Include="ICriteriu.cs" />
+    <Compile Include="IFiltrare.cs" />
     <Compile Include="IPackageble.cs" />
     <Compile Include="Pachet.cs" />
     <Compile Include="Produs.cs" />

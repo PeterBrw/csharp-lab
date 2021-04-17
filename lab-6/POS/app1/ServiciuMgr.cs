@@ -58,7 +58,7 @@ namespace app1
                 int pret = int.Parse(nod["Pret"].InnerText);
                 string categorie = nod["Categorie"].InnerText;
 
-                Serviciu serv = new Serviciu(elemente.Count + 1, nume, codIntern, pret, categorie);
+                Serviciu serv = new Serviciu(elemente.Count + 1, nume, codIntern, pret, categorie);// think about another id not related to elemente.Count same in PacheteMgr
 
                 pachet.Add_element(serv);
             }
