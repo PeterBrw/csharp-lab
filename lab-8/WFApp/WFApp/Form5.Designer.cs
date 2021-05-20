@@ -1,7 +1,7 @@
 ﻿
 namespace WFApp
 {
-    partial class MyForm
+    partial class Form5
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,34 @@ namespace WFApp
         /// </summary>
         private void InitializeComponent()
         {
+            this.dtDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // MyForm
+            // dtDataGridView
+            // 
+            this.dtDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtDataGridView.Location = new System.Drawing.Point(71, 137);
+            this.dtDataGridView.Name = "dtDataGridView";
+            this.dtDataGridView.Size = new System.Drawing.Size(604, 154);
+            this.dtDataGridView.TabIndex = 0;
+            this.dtDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtDataGridView_CellContentClick);
+            // 
+            // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "MyForm";
-            this.Text = "MyForm";
+            this.Controls.Add(this.dtDataGridView);
+            this.Name = "Form5";
+            this.Text = "Form5";
+            ((System.ComponentModel.ISupportInitialize)(this.dtDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dtDataGridView;
     }
 }

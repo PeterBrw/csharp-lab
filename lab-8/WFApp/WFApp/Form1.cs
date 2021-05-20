@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace WFApp
 {
@@ -19,24 +20,31 @@ namespace WFApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void butMyFom_Click(object sender, EventArgs e)
+        private void btnAfisareServicii_Click(object sender, EventArgs e)
         {
-            MyForm aform = new MyForm();
-            aform.Load += new EventHandler(MyForm_Load2);
-            aform.Show();
+            Form3 form3 = new Form3();
+            form3.Show();
         }
 
-        private void MyForm_Load2(object sender, EventArgs e)
+        private void btnAdaugareServicii_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se va afisa fereastra MyFOrm!!!");
+            Form2 form2 = new Form2();
+            form2.Show();
         }
 
-        private void but_schimba_Click(object sender, EventArgs e)
+        private void btnAdaugareProduse_Click(object sender, EventArgs e)
         {
-            this.Text = "Fereastra modificata la run-time!";
+            Form4 form4 = new Form4();
+            form4.Show();
+        }
+
+        private void btnAfisareProduse_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();
+            form5.Show();
         }
     }
 }
