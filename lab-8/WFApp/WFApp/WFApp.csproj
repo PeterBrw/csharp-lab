@@ -58,8 +58,12 @@
     <Compile Include="MyForm.Designer.cs">
       <DependentUpon>MyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PacheteMgr.cs" />
+    <Compile Include="ProdusAbstractMgr.cs" />
+    <Compile Include="ProduseMgr.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiciiMgr.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +91,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\lab-7\POS\entitati\entitati.csproj">
+      <Project>{815ac4bb-14e3-49e8-8cd8-8a91306f4a4d}</Project>
+      <Name>entitati</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
