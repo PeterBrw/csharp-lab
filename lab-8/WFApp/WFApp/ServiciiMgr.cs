@@ -1,10 +1,12 @@
 ﻿using entitati;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace WFApp
 {
@@ -28,8 +30,8 @@ namespace WFApp
         public void InitListafromXML()
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load("D:\\Anul II\\OOP\\labs\\lab-6\\POS\\app1\\Servicii.xml");
-            XmlNodeList lista_noduri = doc.SelectNodes("/servicii/Serviciu");
+            doc.Load("D:\\Anul II\\OOP\\csharp-lab\\lab-8\\WFApp\\WFApp\\bin\\Debug\\servicii.xml");
+            XmlNodeList lista_noduri = doc.SelectNodes("/ArrayOfServiciu/Serviciu");
 
             foreach (XmlNode nod in lista_noduri)
             {
@@ -43,6 +45,19 @@ namespace WFApp
 
                 AdaugareServicii(serv);
             }
+        }
+
+        public void WriteListToXML(List<Serviciu> servicii)
+        {
+            Type[] types = new Type[1];
+            types[0] = typeof(Serviciu);
+
+            XmlSerializer xs = new XmlSerializer(typeof(List<Serviciu>), types);
+            StreamWriter sw = new StreamWriter("servicii.xml");
+
+            xs.Serialize(sw, servicii);
+
+            sw.Close();
         }
 
         public void Init(Pachet pachet)

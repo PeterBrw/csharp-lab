@@ -25,6 +25,12 @@ namespace WFApp
                 Console.WriteLine(prod.Descriere());
             }
         }
+
+        public List<ProdusAbstract> elems ()
+        {
+            return elemente;
+        }
+
         public void Filtrare()
         {
             FiltrareCriteriu filtrare = new FiltrareCriteriu();

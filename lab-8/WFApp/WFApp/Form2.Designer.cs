@@ -29,126 +29,201 @@ namespace WFApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSave = new System.Windows.Forms.Button();
-            this.txtCategorie = new System.Windows.Forms.TextBox();
-            this.txtPret = new System.Windows.Forms.TextBox();
-            this.txtCodIntern = new System.Windows.Forms.TextBox();
-            this.txtNume = new System.Windows.Forms.TextBox();
-            this.lablCategorie = new System.Windows.Forms.Label();
-            this.lblPret = new System.Windows.Forms.Label();
-            this.lblCodIntern = new System.Windows.Forms.Label();
-            this.lblNume = new System.Windows.Forms.Label();
+            this.panelServicii = new System.Windows.Forms.Panel();
+            this.btnSalvareServiciu = new System.Windows.Forms.Button();
+            this.btnClearServiciu = new System.Windows.Forms.Button();
+            this.btnStergeServiciu = new System.Windows.Forms.Button();
+            this.btnModificaServiciu = new System.Windows.Forms.Button();
+            this.btnAdaugaServiciu = new System.Windows.Forms.Button();
+            this.txtCategorieServiciu = new System.Windows.Forms.TextBox();
+            this.lblCategorieServiciu = new System.Windows.Forms.Label();
+            this.txtPretServiciu = new System.Windows.Forms.TextBox();
+            this.lblPretServiciu = new System.Windows.Forms.Label();
+            this.txtCodInternServiciu = new System.Windows.Forms.TextBox();
+            this.lblCodInternServiciu = new System.Windows.Forms.Label();
+            this.txtNumeServiciu = new System.Windows.Forms.TextBox();
+            this.lblNumeServiciu = new System.Windows.Forms.Label();
+            this.dataGridViewServicii = new System.Windows.Forms.DataGridView();
+            this.panelServicii.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewServicii)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSave
+            // panelServicii
             // 
-            this.btnSave.Location = new System.Drawing.Point(367, 267);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 17;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.panelServicii.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelServicii.Controls.Add(this.btnSalvareServiciu);
+            this.panelServicii.Controls.Add(this.btnClearServiciu);
+            this.panelServicii.Controls.Add(this.btnStergeServiciu);
+            this.panelServicii.Controls.Add(this.btnModificaServiciu);
+            this.panelServicii.Controls.Add(this.btnAdaugaServiciu);
+            this.panelServicii.Controls.Add(this.txtCategorieServiciu);
+            this.panelServicii.Controls.Add(this.lblCategorieServiciu);
+            this.panelServicii.Controls.Add(this.txtPretServiciu);
+            this.panelServicii.Controls.Add(this.lblPretServiciu);
+            this.panelServicii.Controls.Add(this.txtCodInternServiciu);
+            this.panelServicii.Controls.Add(this.lblCodInternServiciu);
+            this.panelServicii.Controls.Add(this.txtNumeServiciu);
+            this.panelServicii.Controls.Add(this.lblNumeServiciu);
+            this.panelServicii.Controls.Add(this.dataGridViewServicii);
+            this.panelServicii.Location = new System.Drawing.Point(21, 12);
+            this.panelServicii.Name = "panelServicii";
+            this.panelServicii.Size = new System.Drawing.Size(1122, 583);
+            this.panelServicii.TabIndex = 0;
             // 
-            // txtCategorie
+            // btnSalvareServiciu
             // 
-            this.txtCategorie.Location = new System.Drawing.Point(367, 215);
-            this.txtCategorie.Name = "txtCategorie";
-            this.txtCategorie.Size = new System.Drawing.Size(100, 20);
-            this.txtCategorie.TabIndex = 16;
-            this.txtCategorie.TextChanged += new System.EventHandler(this.txtCategorie_TextChanged);
+            this.btnSalvareServiciu.Location = new System.Drawing.Point(807, 432);
+            this.btnSalvareServiciu.Name = "btnSalvareServiciu";
+            this.btnSalvareServiciu.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvareServiciu.TabIndex = 13;
+            this.btnSalvareServiciu.Text = "Salveaza";
+            this.btnSalvareServiciu.UseVisualStyleBackColor = true;
+            this.btnSalvareServiciu.Click += new System.EventHandler(this.btnSalvareServiciu_Click);
             // 
-            // txtPret
+            // btnClearServiciu
             // 
-            this.txtPret.Location = new System.Drawing.Point(367, 180);
-            this.txtPret.Name = "txtPret";
-            this.txtPret.Size = new System.Drawing.Size(100, 20);
-            this.txtPret.TabIndex = 15;
-            this.txtPret.TextChanged += new System.EventHandler(this.txtPret_TextChanged);
+            this.btnClearServiciu.Location = new System.Drawing.Point(868, 368);
+            this.btnClearServiciu.Name = "btnClearServiciu";
+            this.btnClearServiciu.Size = new System.Drawing.Size(75, 23);
+            this.btnClearServiciu.TabIndex = 12;
+            this.btnClearServiciu.Text = "Clear";
+            this.btnClearServiciu.UseVisualStyleBackColor = true;
+            this.btnClearServiciu.Click += new System.EventHandler(this.btnClearServiciu_Click);
             // 
-            // txtCodIntern
+            // btnStergeServiciu
             // 
-            this.txtCodIntern.Location = new System.Drawing.Point(367, 142);
-            this.txtCodIntern.Name = "txtCodIntern";
-            this.txtCodIntern.Size = new System.Drawing.Size(100, 20);
-            this.txtCodIntern.TabIndex = 14;
+            this.btnStergeServiciu.Location = new System.Drawing.Point(735, 368);
+            this.btnStergeServiciu.Name = "btnStergeServiciu";
+            this.btnStergeServiciu.Size = new System.Drawing.Size(75, 23);
+            this.btnStergeServiciu.TabIndex = 11;
+            this.btnStergeServiciu.Text = "Sterge";
+            this.btnStergeServiciu.UseVisualStyleBackColor = true;
+            this.btnStergeServiciu.Click += new System.EventHandler(this.btnStergeServiciu_Click);
             // 
-            // txtNume
+            // btnModificaServiciu
             // 
-            this.txtNume.Location = new System.Drawing.Point(367, 108);
-            this.txtNume.Name = "txtNume";
-            this.txtNume.Size = new System.Drawing.Size(100, 20);
-            this.txtNume.TabIndex = 13;
-            this.txtNume.TextChanged += new System.EventHandler(this.txtNume_TextChanged);
+            this.btnModificaServiciu.Location = new System.Drawing.Point(868, 304);
+            this.btnModificaServiciu.Name = "btnModificaServiciu";
+            this.btnModificaServiciu.Size = new System.Drawing.Size(75, 23);
+            this.btnModificaServiciu.TabIndex = 10;
+            this.btnModificaServiciu.Text = "Modifica";
+            this.btnModificaServiciu.UseVisualStyleBackColor = true;
+            this.btnModificaServiciu.Click += new System.EventHandler(this.btnModificaServiciu_Click);
             // 
-            // lablCategorie
+            // btnAdaugaServiciu
             // 
-            this.lablCategorie.AutoSize = true;
-            this.lablCategorie.Location = new System.Drawing.Point(284, 215);
-            this.lablCategorie.Name = "lablCategorie";
-            this.lablCategorie.Size = new System.Drawing.Size(52, 13);
-            this.lablCategorie.TabIndex = 12;
-            this.lablCategorie.Text = "Categorie";
+            this.btnAdaugaServiciu.Location = new System.Drawing.Point(735, 304);
+            this.btnAdaugaServiciu.Name = "btnAdaugaServiciu";
+            this.btnAdaugaServiciu.Size = new System.Drawing.Size(75, 23);
+            this.btnAdaugaServiciu.TabIndex = 9;
+            this.btnAdaugaServiciu.Text = "Adauga";
+            this.btnAdaugaServiciu.UseVisualStyleBackColor = true;
+            this.btnAdaugaServiciu.Click += new System.EventHandler(this.btnAdaugaServiciu_Click);
             // 
-            // lblPret
+            // txtCategorieServiciu
             // 
-            this.lblPret.AutoSize = true;
-            this.lblPret.Location = new System.Drawing.Point(284, 180);
-            this.lblPret.Name = "lblPret";
-            this.lblPret.Size = new System.Drawing.Size(26, 13);
-            this.lblPret.TabIndex = 11;
-            this.lblPret.Text = "Pret";
+            this.txtCategorieServiciu.Location = new System.Drawing.Point(794, 185);
+            this.txtCategorieServiciu.Name = "txtCategorieServiciu";
+            this.txtCategorieServiciu.Size = new System.Drawing.Size(181, 20);
+            this.txtCategorieServiciu.TabIndex = 8;
             // 
-            // lblCodIntern
+            // lblCategorieServiciu
             // 
-            this.lblCodIntern.AutoSize = true;
-            this.lblCodIntern.Location = new System.Drawing.Point(284, 142);
-            this.lblCodIntern.Name = "lblCodIntern";
-            this.lblCodIntern.Size = new System.Drawing.Size(56, 13);
-            this.lblCodIntern.TabIndex = 10;
-            this.lblCodIntern.Text = "Cod Intern";
+            this.lblCategorieServiciu.AutoSize = true;
+            this.lblCategorieServiciu.Location = new System.Drawing.Point(696, 188);
+            this.lblCategorieServiciu.Name = "lblCategorieServiciu";
+            this.lblCategorieServiciu.Size = new System.Drawing.Size(52, 13);
+            this.lblCategorieServiciu.TabIndex = 7;
+            this.lblCategorieServiciu.Text = "Categorie";
             // 
-            // lblNume
+            // txtPretServiciu
             // 
-            this.lblNume.AutoSize = true;
-            this.lblNume.Location = new System.Drawing.Point(284, 111);
-            this.lblNume.Name = "lblNume";
-            this.lblNume.Size = new System.Drawing.Size(35, 13);
-            this.lblNume.TabIndex = 9;
-            this.lblNume.Text = "Nume";
+            this.txtPretServiciu.Location = new System.Drawing.Point(794, 154);
+            this.txtPretServiciu.Name = "txtPretServiciu";
+            this.txtPretServiciu.Size = new System.Drawing.Size(181, 20);
+            this.txtPretServiciu.TabIndex = 6;
+            // 
+            // lblPretServiciu
+            // 
+            this.lblPretServiciu.AutoSize = true;
+            this.lblPretServiciu.Location = new System.Drawing.Point(696, 157);
+            this.lblPretServiciu.Name = "lblPretServiciu";
+            this.lblPretServiciu.Size = new System.Drawing.Size(26, 13);
+            this.lblPretServiciu.TabIndex = 5;
+            this.lblPretServiciu.Text = "Pret";
+            // 
+            // txtCodInternServiciu
+            // 
+            this.txtCodInternServiciu.Location = new System.Drawing.Point(794, 115);
+            this.txtCodInternServiciu.Name = "txtCodInternServiciu";
+            this.txtCodInternServiciu.Size = new System.Drawing.Size(181, 20);
+            this.txtCodInternServiciu.TabIndex = 4;
+            // 
+            // lblCodInternServiciu
+            // 
+            this.lblCodInternServiciu.AutoSize = true;
+            this.lblCodInternServiciu.Location = new System.Drawing.Point(696, 118);
+            this.lblCodInternServiciu.Name = "lblCodInternServiciu";
+            this.lblCodInternServiciu.Size = new System.Drawing.Size(56, 13);
+            this.lblCodInternServiciu.TabIndex = 3;
+            this.lblCodInternServiciu.Text = "Cod Intern";
+            // 
+            // txtNumeServiciu
+            // 
+            this.txtNumeServiciu.Location = new System.Drawing.Point(794, 76);
+            this.txtNumeServiciu.Name = "txtNumeServiciu";
+            this.txtNumeServiciu.Size = new System.Drawing.Size(181, 20);
+            this.txtNumeServiciu.TabIndex = 2;
+            // 
+            // lblNumeServiciu
+            // 
+            this.lblNumeServiciu.AutoSize = true;
+            this.lblNumeServiciu.Location = new System.Drawing.Point(696, 79);
+            this.lblNumeServiciu.Name = "lblNumeServiciu";
+            this.lblNumeServiciu.Size = new System.Drawing.Size(35, 13);
+            this.lblNumeServiciu.TabIndex = 1;
+            this.lblNumeServiciu.Text = "Nume";
+            // 
+            // dataGridViewServicii
+            // 
+            this.dataGridViewServicii.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewServicii.Location = new System.Drawing.Point(23, 31);
+            this.dataGridViewServicii.Name = "dataGridViewServicii";
+            this.dataGridViewServicii.Size = new System.Drawing.Size(596, 527);
+            this.dataGridViewServicii.TabIndex = 0;
+            this.dataGridViewServicii.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewServicii_MouseClick);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtCategorie);
-            this.Controls.Add(this.txtPret);
-            this.Controls.Add(this.txtCodIntern);
-            this.Controls.Add(this.txtNume);
-            this.Controls.Add(this.lablCategorie);
-            this.Controls.Add(this.lblPret);
-            this.Controls.Add(this.lblCodIntern);
-            this.Controls.Add(this.lblNume);
+            this.ClientSize = new System.Drawing.Size(1171, 616);
+            this.Controls.Add(this.panelServicii);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.MyForm_Load);
+            this.panelServicii.ResumeLayout(false);
+            this.panelServicii.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewServicii)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtCategorie;
-        private System.Windows.Forms.TextBox txtPret;
-        private System.Windows.Forms.TextBox txtCodIntern;
-        private System.Windows.Forms.TextBox txtNume;
-        private System.Windows.Forms.Label lablCategorie;
-        private System.Windows.Forms.Label lblPret;
-        private System.Windows.Forms.Label lblCodIntern;
-        private System.Windows.Forms.Label lblNume;
+        private System.Windows.Forms.Panel panelServicii;
+        private System.Windows.Forms.DataGridView dataGridViewServicii;
+        private System.Windows.Forms.Label lblCodInternServiciu;
+        private System.Windows.Forms.TextBox txtNumeServiciu;
+        private System.Windows.Forms.Label lblNumeServiciu;
+        private System.Windows.Forms.TextBox txtCodInternServiciu;
+        private System.Windows.Forms.Button btnClearServiciu;
+        private System.Windows.Forms.Button btnStergeServiciu;
+        private System.Windows.Forms.Button btnModificaServiciu;
+        private System.Windows.Forms.Button btnAdaugaServiciu;
+        private System.Windows.Forms.TextBox txtCategorieServiciu;
+        private System.Windows.Forms.Label lblCategorieServiciu;
+        private System.Windows.Forms.TextBox txtPretServiciu;
+        private System.Windows.Forms.Label lblPretServiciu;
+        private System.Windows.Forms.Button btnSalvareServiciu;
     }
 }

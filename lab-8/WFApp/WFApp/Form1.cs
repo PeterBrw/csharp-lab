@@ -23,28 +23,16 @@ namespace WFApp
             
         }
 
-        private void btnAfisareServicii_Click(object sender, EventArgs e)
-        {
-            Form3 form3 = new Form3();
-            form3.Show();
-        }
-
-        private void btnAdaugareServicii_Click(object sender, EventArgs e)
+        private void btnServicii_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
             form2.Show();
         }
 
-        private void btnAdaugareProduse_Click(object sender, EventArgs e)
+        private void btnProduse_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
-            form4.Show();
-        }
-
-        private void btnAfisareProduse_Click(object sender, EventArgs e)
-        {
-            Form5 form5 = new Form5();
-            form5.Show();
+            Form3 form3 = new Form3();
+            form3.Show();
         }
     }
 }

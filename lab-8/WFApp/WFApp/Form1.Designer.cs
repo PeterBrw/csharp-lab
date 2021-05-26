@@ -31,63 +31,37 @@ namespace WFApp
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.btnAfisareServicii = new System.Windows.Forms.Button();
-            this.btnAdaugareServicii = new System.Windows.Forms.Button();
-            this.btnAfisareProduse = new System.Windows.Forms.Button();
-            this.btnAdaugareProduse = new System.Windows.Forms.Button();
+            this.btnServicii = new System.Windows.Forms.Button();
+            this.btnProduse = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnAfisareServicii
+            // btnServicii
             // 
-            this.btnAfisareServicii.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.btnAfisareServicii.Location = new System.Drawing.Point(64, 81);
-            this.btnAfisareServicii.Name = "btnAfisareServicii";
-            this.btnAfisareServicii.Size = new System.Drawing.Size(177, 23);
-            this.btnAfisareServicii.TabIndex = 9;
-            this.btnAfisareServicii.Text = "Afisare Servicii";
-            this.btnAfisareServicii.UseVisualStyleBackColor = true;
-            this.btnAfisareServicii.Click += new System.EventHandler(this.btnAfisareServicii_Click);
+            this.btnServicii.Location = new System.Drawing.Point(232, 292);
+            this.btnServicii.Name = "btnServicii";
+            this.btnServicii.Size = new System.Drawing.Size(137, 47);
+            this.btnServicii.TabIndex = 0;
+            this.btnServicii.Text = "Servicii";
+            this.btnServicii.UseVisualStyleBackColor = true;
+            this.btnServicii.Click += new System.EventHandler(this.btnServicii_Click);
             // 
-            // btnAdaugareServicii
+            // btnProduse
             // 
-            this.btnAdaugareServicii.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.btnAdaugareServicii.Location = new System.Drawing.Point(64, 145);
-            this.btnAdaugareServicii.Name = "btnAdaugareServicii";
-            this.btnAdaugareServicii.Size = new System.Drawing.Size(177, 23);
-            this.btnAdaugareServicii.TabIndex = 10;
-            this.btnAdaugareServicii.Text = "Adaugare Servicii";
-            this.btnAdaugareServicii.UseVisualStyleBackColor = true;
-            this.btnAdaugareServicii.Click += new System.EventHandler(this.btnAdaugareServicii_Click);
-            // 
-            // btnAfisareProduse
-            // 
-            this.btnAfisareProduse.Location = new System.Drawing.Point(286, 81);
-            this.btnAfisareProduse.Name = "btnAfisareProduse";
-            this.btnAfisareProduse.Size = new System.Drawing.Size(162, 23);
-            this.btnAfisareProduse.TabIndex = 11;
-            this.btnAfisareProduse.Text = "Afisare Produse";
-            this.btnAfisareProduse.UseVisualStyleBackColor = true;
-            this.btnAfisareProduse.Click += new System.EventHandler(this.btnAfisareProduse_Click);
-            // 
-            // btnAdaugareProduse
-            // 
-            this.btnAdaugareProduse.Location = new System.Drawing.Point(286, 145);
-            this.btnAdaugareProduse.Name = "btnAdaugareProduse";
-            this.btnAdaugareProduse.Size = new System.Drawing.Size(162, 23);
-            this.btnAdaugareProduse.TabIndex = 12;
-            this.btnAdaugareProduse.Text = "Adaugare Produse";
-            this.btnAdaugareProduse.UseVisualStyleBackColor = true;
-            this.btnAdaugareProduse.Click += new System.EventHandler(this.btnAdaugareProduse_Click);
+            this.btnProduse.Location = new System.Drawing.Point(505, 292);
+            this.btnProduse.Name = "btnProduse";
+            this.btnProduse.Size = new System.Drawing.Size(137, 47);
+            this.btnProduse.TabIndex = 1;
+            this.btnProduse.Text = "Produse";
+            this.btnProduse.UseVisualStyleBackColor = true;
+            this.btnProduse.Click += new System.EventHandler(this.btnProduse_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 698);
-            this.Controls.Add(this.btnAdaugareProduse);
-            this.Controls.Add(this.btnAfisareProduse);
-            this.Controls.Add(this.btnAdaugareServicii);
-            this.Controls.Add(this.btnAfisareServicii);
+            this.Controls.Add(this.btnProduse);
+            this.Controls.Add(this.btnServicii);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -98,10 +72,8 @@ namespace WFApp
         #endregion
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private System.Windows.Forms.Button btnAfisareServicii;
-        private System.Windows.Forms.Button btnAdaugareServicii;
-        private System.Windows.Forms.Button btnAfisareProduse;
-        private System.Windows.Forms.Button btnAdaugareProduse;
+        private System.Windows.Forms.Button btnServicii;
+        private System.Windows.Forms.Button btnProduse;
     }
 }
 

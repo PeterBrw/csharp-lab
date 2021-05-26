@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
 using System.Xml.Serialization;
 
 namespace WFApp
@@ -19,75 +18,165 @@ namespace WFApp
         public Form2()
         {
             InitializeComponent();
+            dataGridViewServicii.ColumnCount = 4;
+            dataGridViewServicii.Columns[0].Name = "Nume";
+            dataGridViewServicii.Columns[1].Name = "Cod Intern";
+            dataGridViewServicii.Columns[2].Name = "Pret";
+            dataGridViewServicii.Columns[3].Name = "Categorie";
+
+            dataGridViewServicii.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGridViewServicii.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewServicii.MultiSelect = false;
+
+            populateDataGrid();
         }
 
-        private void MyForm_Load(object sender, EventArgs e)
+        private List<ProdusAbstract> servicii()
         {
-
+            ServiciuMgr servicii = new ServiciuMgr();
+            servicii.InitListafromXML();
+            List<ProdusAbstract> services = servicii.elems();
+            return services;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void populateDataGrid()
         {
-
+            var services = servicii();
+            foreach (ProdusAbstract serv in services)
+            {
+                if (serv is Serviciu)
+                {
+                    dataGridViewServicii.Rows.Add(serv.Nume, serv.CodIntern, serv.Pret, serv.Categorie);
+                }
+            }
         }
 
-        private void txtNume_TextChanged(object sender, EventArgs e)
+        private void add(string nume, string codIntern, string pret, string categorie)
         {
+            dataGridViewServicii.Rows.Add(nume, codIntern, pret, categorie);
 
+            clearTxts();
         }
 
-      
-
-        private void txtPret_TextChanged(object sender, EventArgs e)
+        private void clearTxts()
         {
-
+            txtNumeServiciu.Text = "";
+            txtCodInternServiciu.Text = "";
+            txtPretServiciu.Text = "";
+            txtCategorieServiciu.Text = "";
         }
 
-        private void txtCategorie_TextChanged(object sender, EventArgs e)
+        private void update()
         {
+            dataGridViewServicii.SelectedRows[0].Cells[0].Value = txtNumeServiciu.Text;
+            dataGridViewServicii.SelectedRows[0].Cells[1].Value = txtCodInternServiciu.Text;
+            dataGridViewServicii.SelectedRows[0].Cells[2].Value = txtPretServiciu.Text;
+            dataGridViewServicii.SelectedRows[0].Cells[3].Value = txtCategorieServiciu.Text;
 
+            clearTxts();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void delete()
         {
-            Random rnd = new Random();
-            List<Serviciu> servicii = new List<Serviciu>();
 
-            XmlDocument doc = new XmlDocument();
-            doc.Load("D:\\Anul II\\OOP\\csharp-lab\\lab-8\\WFApp\\WFApp\\bin\\Debug\\servicii.xml");
-            XmlNodeList lista_noduri = doc.SelectNodes("/ArrayOfServiciu/Serviciu");
-
-            foreach (XmlNode nod in lista_noduri)
+            if (dataGridViewServicii.RowCount <= 1 || dataGridViewServicii.SelectedRows[0].Cells[0].Value == null)
             {
 
-                string nume = nod["Nume"].InnerText;
-                string codIntern = nod["CodIntern"].InnerText;
-                int pret = int.Parse(nod["Pret"].InnerText);
-                string categorie = nod["Categorie"].InnerText;
+            }
+            else
+            {
+                if (MessageBox.Show("Vrei sa stergi Serviciul", "STERGERE", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    int index = dataGridViewServicii.SelectedRows[0].Index;
 
-                Serviciu serv = new Serviciu(rnd.Next(), nume, codIntern, pret, categorie);
-                servicii.Add(serv);
+                    dataGridViewServicii.Rows.RemoveAt(index);
+
+                    clearTxts();
+                }
             }
 
-            
-            string numeS = txtNume.Text;
-            string codInternS = txtCodIntern.Text;
-            int pretS = int.Parse(txtPret.Text);
-            string categorieS = txtCategorie.Text;
-            int idS = rnd.Next();
-            Serviciu serviciu = new Serviciu(idS, numeS, codInternS, pretS, categorieS);
+        }
 
-            servicii.Add(serviciu);
+        private void btnAdaugaServiciu_Click(object sender, EventArgs e)
+        {
+            if (txtNumeServiciu.Text == "" || txtCodInternServiciu.Text == "" || txtPretServiciu.Text == "" || txtCategorieServiciu.Text == "")
+            {
 
-            Type[] types = new Type[1];
-            types[0] = typeof(Serviciu);
- 
-            XmlSerializer xs = new XmlSerializer(typeof(List<Serviciu>), types);
-            StreamWriter sw = new StreamWriter("servicii.xml");
+            }
+            else
+            {
+                add(txtNumeServiciu.Text, txtCodInternServiciu.Text, txtPretServiciu.Text, txtCategorieServiciu.Text);
+            }
+        }
 
-            xs.Serialize(sw, servicii);
-            
-            sw.Close();
+        private void btnModificaServiciu_Click(object sender, EventArgs e)
+        {
+            if (txtNumeServiciu.Text == "" || txtCodInternServiciu.Text == "" || txtPretServiciu.Text == "" || txtCategorieServiciu.Text == "")
+            {
+
+            }
+            else
+            {
+                update();
+            }
+        }
+
+        private void btnStergeServiciu_Click(object sender, EventArgs e)
+        {
+            delete();
+            Refresh();
+        }
+
+        private void btnClearServiciu_Click(object sender, EventArgs e)
+        {
+            dataGridViewServicii.Rows.Clear();
+        }
+
+        private void dataGridViewServicii_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dataGridViewServicii.SelectedRows[0].Cells[0].Value == null)
+            {
+
+            }
+            else
+            {
+                txtNumeServiciu.Text = dataGridViewServicii.SelectedRows[0].Cells[0].Value.ToString();
+                txtCodInternServiciu.Text = dataGridViewServicii.SelectedRows[0].Cells[1].Value.ToString();
+                txtPretServiciu.Text = dataGridViewServicii.SelectedRows[0].Cells[2].Value.ToString();
+                txtCategorieServiciu.Text = dataGridViewServicii.SelectedRows[0].Cells[3].Value.ToString();
+            }
+        }
+
+        private void btnSalvareServiciu_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            List<Serviciu> serviciiDeSalvat = new List<Serviciu>();
+
+            foreach (DataGridViewRow row in dataGridViewServicii.Rows)
+            {
+                string nume = row.Cells[0].Value == null ?
+          string.Empty : row.Cells[0].Value.ToString();
+                string codIntern = row.Cells[1].Value == null ?
+          string.Empty : row.Cells[1].Value.ToString();
+                int pret = row.Cells[2].Value == null ?
+          0 : int.Parse(row.Cells[2].Value.ToString());
+                string categorie = row.Cells[3].Value == null ?
+          string.Empty : row.Cells[3].Value.ToString();
+                int id = rnd.Next(1, 1000);
+
+                if(nume == null || nume == "")
+                {
+
+                } else
+                {
+                    serviciiDeSalvat.Add(new Serviciu(id, nume, codIntern, pret, categorie));
+                }
+            }
+
+
+            ServiciuMgr serv = new ServiciuMgr();
+            serv.WriteListToXML(serviciiDeSalvat);
         }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 using entitati;
 
 namespace WFApp
@@ -24,13 +26,13 @@ namespace WFApp
                 Console.WriteLine("Produs adaugat!");
             }
         }
-        //string nume =  extboxNume.Text;
+
         public void InitListafromXML()
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load("D:\\Anul II\\OOP\\labs\\lab-6\\POS\\app1\\Produse.xml");
+            doc.Load("D:\\Anul II\\OOP\\csharp-lab\\lab-8\\WFApp\\WFApp\\bin\\Debug\\produse.xml");
 
-            XmlNodeList lista_noduri = doc.SelectNodes("/produse/Produs");
+            XmlNodeList lista_noduri = doc.SelectNodes("/ArrayOfProdus/Produs");
             foreach (XmlNode nod in lista_noduri)
             {
 
@@ -45,6 +47,20 @@ namespace WFApp
                 AdaugareProduse(prod);
             }
         }
+
+        public void WriteListToXML(List<Produs> servicii)
+        {
+            Type[] types = new Type[1];
+            types[0] = typeof(Produs);
+
+            XmlSerializer xs = new XmlSerializer(typeof(List<Produs>), types);
+            StreamWriter sw = new StreamWriter("produse.xml");
+
+            xs.Serialize(sw, servicii);
+
+            sw.Close();
+        }
+
 
         public void Init(Pachet pachet)
         {
